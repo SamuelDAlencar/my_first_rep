@@ -1,2 +1,3 @@
 text addition
-text addition - second branchtext addition test
+text addition - second branch
+text addition test
