@@ -125,3 +125,18 @@ if (ValorDeVenda && Custo > 0) {
 
 // ---------------------------------- 
 
+let SalarioBruto = 3500.70;
+
+if (SalarioBruto <= 1556.94) {
+  SalarioBruto - 280.056
+} else if (SalarioBruto >= 1556.95 &&  SalarioBruto < 2594.92) {
+  SalarioBruto - 315.063
+} else if (SalarioBruto >= 2594.93 &&  SalarioBruto < 5189.82) {
+  SalarioBruto - 385.077
+} else if (SalarioBruto > 5189.82) {
+  SalarioBruto - 570.88
+} else {
+
+}
+
+console.log (SalarioBruto)
