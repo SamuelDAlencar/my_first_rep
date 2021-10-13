@@ -108,3 +108,20 @@ if (numberA % 2 > 0 || numberB % 2 > 0 || numberC % 2 > 0) {
 }
 
 // ---------------------------------- 
+
+const Custo = 50;
+const ImpostoSobCusto = 10;
+const CustoTotal = Custo + ImpostoSobCusto;
+const ValorDeVenda = 70;
+
+
+
+if (ValorDeVenda && Custo > 0) {
+  const lucro = ValorDeVenda * 1000 - CustoTotal * 1000
+  console.log(lucro)
+} else {
+  console.log("! error ! invalid entry numbers ")
+}
+
+// ---------------------------------- 
+
