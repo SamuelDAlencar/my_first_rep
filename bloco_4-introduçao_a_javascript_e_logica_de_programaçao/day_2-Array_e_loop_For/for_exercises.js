@@ -56,7 +56,7 @@ console.log(numerosImpares)
 let menorNumero = 0;
 
 for (index = 0 ; index < numbers.length ; index++) {
-  if (numbers[index] != 0 || numbers[index] < numbers[index]) {
+  if (numbers[index] < numbers[index]) {
     menorNumero = numbers[index];
   }
 }
