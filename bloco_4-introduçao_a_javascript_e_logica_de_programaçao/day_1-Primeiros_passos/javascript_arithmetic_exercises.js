@@ -125,18 +125,18 @@ if (ValorDeVenda && Custo > 0) {
 
 // ---------------------------------- 
 
-let SalarioBruto = 3500.70;
+let salarioBruto = 3500.70;
 
-if (SalarioBruto <= 1556.94) {
-  SalarioBruto - 280.056
-} else if (SalarioBruto >= 1556.95 &&  SalarioBruto < 2594.92) {
-  SalarioBruto - 315.063
-} else if (SalarioBruto >= 2594.93 &&  SalarioBruto < 5189.82) {
-  SalarioBruto - 385.077
-} else if (SalarioBruto > 5189.82) {
-  SalarioBruto - 570.88
+if (salarioBruto <= 1556.94) {
+  salarioBruto - 280.056
+} else if (salarioBruto >= 1556.95 &&  salarioBruto < 2594.92) {
+  salarioBruto - 315.063
+} else if (salarioBruto >= 2594.93 &&  salarioBruto < 5189.82) {
+  salarioBruto - 385.077
+} else if (salarioBruto > 5189.82) {
+  salarioBruto - 570.88
 } else {
 
 }
 
-console.log (SalarioBruto)
+console.log (salarioBruto)
