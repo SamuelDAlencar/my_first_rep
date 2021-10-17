@@ -1,6 +1,7 @@
 // Exercise 1
 
 let n = 4;
+
 let text1 = "";
 
 for (let iC = 0 ; iC < n ; iC++) {
@@ -29,7 +30,10 @@ console.log("---------------------------")
 // ------------------------------------------
 // Exercise 3
 
+let text3 = "**";
 
+for (let i = 4 ; i < n ; i--) {
+  text3 += " "
+}
 
-
-
+text
