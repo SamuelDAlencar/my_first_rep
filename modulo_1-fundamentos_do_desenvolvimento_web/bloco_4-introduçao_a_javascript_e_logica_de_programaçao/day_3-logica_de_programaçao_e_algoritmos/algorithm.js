@@ -35,5 +35,3 @@ let text3 = "**";
 for (let i = 4 ; i < n ; i--) {
   text3 += " "
 }
-
-text
