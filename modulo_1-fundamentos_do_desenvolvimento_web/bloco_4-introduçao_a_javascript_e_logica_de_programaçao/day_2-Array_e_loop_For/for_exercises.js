@@ -5,6 +5,7 @@ for (index = 0 ; index < numbers.length ; index++) {
   console.log(numbers[index])
 }
 
+console.log("// -------------------------------")
 // -------------------------------
 
 for (index = 0 ; index < numbers.length ; index++) {
@@ -13,18 +14,20 @@ for (index = 0 ; index < numbers.length ; index++) {
 
 console.log(soma);
 
+console.log("// -------------------------------")
 // -------------------------------
 
 let mediaAritmetica = soma / numbers.length;
 
-console.log(mediaAritmetica);
+console.log("A média aritmetica é: " + mediaAritmetica);
 
 if (mediaAritmetica > 20) {
-  console.log("valor maior que 20") 
+  console.log("A média aritmetica é maior que 20") 
 } else {
-  console.log("valor menor que 20")
+  console.log("A média aritmetica é menor que 20")
 }
 
+console.log("// -------------------------------")
 // -------------------------------
 
 let maiorNumero = 0;
@@ -37,6 +40,7 @@ for (index = 0 ; index < numbers.length ; index++) {
 
 console.log(maiorNumero)
 
+console.log("// -------------------------------")
 // -------------------------------
 
 numerosImpares = 0
@@ -51,6 +55,7 @@ for (index = 0 ; index < numbers.length ; index++) {
 
 console.log(numerosImpares)
 
+console.log("// -------------------------------")
 // -------------------------------
 
 let menorNumero = 0;
@@ -63,4 +68,23 @@ for (index = 0 ; index < numbers.length ; index++) {
 
 console.log(menorNumero)
 
+console.log("// -------------------------------")
+// -------------------------------
+
+let counter = []
+
+for (let i = 1 ; i <= 25 ; i++) {
+  counter.push(i)
+}
+
+console.log(counter)
+
+console.log("// -------------------------------")
+// -------------------------------
+
+for (let i = 0 ; i < counter.length ; i++) {
+  console.log(counter[i] / 2);
+}
+
+console.log("// -------------------------------")
 // -------------------------------
