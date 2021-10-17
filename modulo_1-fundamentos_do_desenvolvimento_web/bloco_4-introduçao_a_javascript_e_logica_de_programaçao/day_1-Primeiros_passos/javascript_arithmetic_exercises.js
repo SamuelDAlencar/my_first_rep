@@ -128,15 +128,29 @@ if (ValorDeVenda && Custo > 0) {
 let salarioBruto = 3500.70;
 
 if (salarioBruto <= 1556.94) {
-  salarioBruto - 280.056
+  let salarioBase = salarioBruto -= 280.056
 } else if (salarioBruto >= 1556.95 &&  salarioBruto < 2594.92) {
-  salarioBruto - 315.063
+  salarioBase = salarioBruto -= 315.063
 } else if (salarioBruto >= 2594.93 &&  salarioBruto < 5189.82) {
-  salarioBruto - 385.077
+  salarioBase = salarioBruto -= 385.077
 } else if (salarioBruto > 5189.82) {
-  salarioBruto - 570.88
-} else {
-
+  salarioBase = salarioBruto -= 570.88
 }
 
-console.log (salarioBruto)
+console.log ("Salario base: " + salarioBase)
+
+if (salarioBase <= 1903.98) {
+  console.log("Isento de imposto de renda")
+} else if (salarioBase > 1903.99 && salarioBase < 2826.65) {
+  let salarioLiquido = salarioBase -= (233.67 - 142.80)
+} else if (salarioBase > 2826.66 && salarioBase < 3751.05) {
+  let salarioLiquido = salarioBase -= (467.34 - 354.80)
+} else if (salarioBase > 3751.06 && salarioBase < 4664.68) {
+  let salarioLiquido = salarioBase -= (701.01 - 636.13)
+} else if (salarioBase > 4664.68) {
+  let salarioLiquido = salarioBase -= (856.79 - 869.36)
+}
+
+console.log ("Salario liquido: " + salarioBase)
+
+// ---------------------------------- 
