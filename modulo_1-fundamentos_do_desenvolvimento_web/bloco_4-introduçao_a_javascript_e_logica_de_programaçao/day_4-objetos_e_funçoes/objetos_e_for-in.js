@@ -38,4 +38,10 @@ for (let objetos in info) {
 
 console.log("----------------------------")
 
-// ------------------------------------------
+// Exercise 5 -------------------------------
+
+for (let objetos in info) {
+  for (let objetos2 in info2 ) {
+    console.log(info[objetos] + " e " + info2[objetos2])
+  }
+}
