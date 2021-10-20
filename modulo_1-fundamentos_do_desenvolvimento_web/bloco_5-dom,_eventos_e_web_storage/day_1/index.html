@@ -44,7 +44,7 @@
       <p>Trybe</p>
     </section>
   </main>
-  <script>
+  <script src="funcoes_de_manipulacao_do_DOM.js">
     /*
     Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
     - document.getElementById()
@@ -59,7 +59,25 @@
     */
 
 
+    // ----------------------------------------------------------------------------------
+    document.getElementsByTagName('p')[0].innerText = 'Me vejo como um programador fullstack pleno'
+    // ----------------------------------------------------------------------------------
+    document.getElementsByClassName('main-content')[0].style.backgroundColor = 'rgb(76,164,109';
+    // ----------------------------------------------------------------------------------
+    document.querySelector('.center-content').style.backgroundColor = 'white'
+    // ----------------------------------------------------------------------------------
+    document.getElementById('title').innerText = 'Exercício 5.1 - Javascript'
+    // ----------------------------------------------------------------------------------
+    let pTag = document.getElementsByTagName('p')
 
+    function upperCase(tag) {
+      for (let i = 0; i < tag.length; i++) {
+        pTag[i].innerText = pTag[i].innerText.toUpperCase();
+      }
+    }
+
+    upperCase(pTag)
+    // ----------------------------------------------------------------------------------
   </script>
 </body>
 
