@@ -105,8 +105,40 @@
       }
     }
 
-    childElementCreator(3, 'ul', 0, 'li')
-    
+    childElementCreator(10, 'ul', 0, 'li')
+
+    for (i = 0; i < 10; i++) {
+      document.getElementsByTagName('li')[i].innerText = i
+    }
+
+    // Exercise 9
+    childElementCreator(3, 'main', 0, 'h3')
+
+    // Exercise 1 part 2
+    document.getElementsByTagName('h1')[0].classList.add('title')
+
+    // Exercise 2 part 2
+    for (i = 0; i < 3; i++) {
+      document.getElementsByTagName('h3')[i].classList.add('description')
+    }
+
+    // Exercise 3 part 2
+    document.getElementsByTagName('main')[0].removeChild(document.getElementsByClassName('left-content')[0])
+
+    // Exercise 4 part 2
+    document.getElementsByClassName('right-content')[0].style.marginRight = 'auto'
+
+    // Exercise 5 part 2
+    document.getElementsByClassName('main-content')[0].style.backgroundColor = 'green'
+
+    // Exercise 6 part 2
+    function elementRemover(elementTag, elementIndice) {
+      document.getElementsByTagName(elementTag)[elementIndice].remove();
+    }
+
+    elementRemover('li', 9)
+    elementRemover('li', 8)
+
   </script>
 </body>
 
