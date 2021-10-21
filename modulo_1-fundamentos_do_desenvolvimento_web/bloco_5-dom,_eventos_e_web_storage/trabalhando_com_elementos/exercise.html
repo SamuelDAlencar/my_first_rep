@@ -60,10 +60,10 @@
 <body>
   <script>
     // Exercise 1
-    let h1Creation = document.createElement('h1');
-    let mainCreation = document.createElement('main');
-    let body = document.getElementsByTagName('body')[0];
-    let main = document.getElementsByTagName('main')[0];
+    let h1Creation = document.createElement('h1')
+    let mainCreation = document.createElement('main')
+    let body = document.getElementsByTagName('body')[0]
+
 
     body.appendChild(h1Creation);
     body.children[1].innerText = 'Exercício 5.2 - JavaScript DOM';
@@ -72,8 +72,41 @@
     body.appendChild(mainCreation).classList.add('main-content')
 
     // Exercise 3
-    main.appendChild(section)
+    let sectionCreation = document.createElement('section')
+    let main = document.getElementsByTagName('main')[0]
 
+    main.appendChild(sectionCreation).classList.add('center-content')
+
+    // Exercise 4
+    document.getElementsByTagName('section')[0].appendChild(document.createElement('p')).innerText = ('Baodia')
+
+    // Exercise 5
+    main.appendChild(document.createElement('section'))
+    document.getElementsByTagName('section')[1].classList.add('left-content')
+
+    // Exercise 6
+    main.appendChild(document.createElement('section'))
+    document.getElementsByTagName('section')[2].classList.add('right-content')
+
+    // Exercise 7
+    document.getElementsByTagName('section')[1].appendChild(document.createElement('img')).src = 'https://picsum.photos/200';
+
+    document.getElementsByTagName('img')[0].classList.add('small-image')
+
+    // Exercise 8
+    let ul = document.getElementsByTagName('ul')
+    document.getElementsByTagName('section')[2].appendChild(document.createElement('ul'))
+
+    function childElementCreator(howMany, parentTag, parentIndice, child) {
+      let findParent = document.getElementsByTagName(parentTag)[parentIndice]
+
+      for (i = 0; i < howMany; i++) {
+        findParent.appendChild(document.createElement(child))
+      }
+    }
+
+    childElementCreator(3, 'ul', 0, 'li')
+    
   </script>
 </body>
 
