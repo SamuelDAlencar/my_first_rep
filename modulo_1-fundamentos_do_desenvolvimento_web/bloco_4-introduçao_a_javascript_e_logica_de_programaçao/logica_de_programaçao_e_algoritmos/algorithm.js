@@ -30,8 +30,10 @@ console.log("---------------------------")
 // ------------------------------------------
 // Exercise 3
 
-let text3 = "**";
+let text3 = '';
 
-for (let i = 4 ; i < n ; i--) {
-  text3 += " "
+for (i = 0 ; i < n ; i++) {
+  text3 += '* '
+
+  console.log(text3)
 }
