@@ -14,3 +14,16 @@ function createDaysOfTheWeek() {
 createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
+
+function calendarDays(days) {
+  for (i = 1 ; i <= days ; i++) {
+    document.getElementById('days').appendChild(document.createElement('li')).classList.add('day')
+
+    var child = document.getElementById('days').childNodes[i];
+
+    console.log(child)
+
+  }
+}
+
+calendarDays(28)
