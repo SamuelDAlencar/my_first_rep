@@ -20,12 +20,16 @@ console.log("----------------------------")
 
 info.recorrente = "sim"
 
+for (objetos in info) {
+  console.log(objetos + ': "' + info[objetos] + '"')
+}
+
 console.log("----------------------------")
 
 // Exercise 3 -------------------------------
 
 for (let objetos in info) {
-console.log (objetos)
+  console.log(objetos)
 }
 
 console.log("----------------------------")
@@ -40,8 +44,12 @@ console.log("----------------------------")
 
 // Exercise 5 -------------------------------
 
-for (let objetos in info) {
-  for (let objetos2 in info2 ) {
-    console.log(info[objetos] + " e " + info2[objetos2])
+for (object in info) {
+  if (object != "recorrente") {
+    console.log(info[object] + ' e ' + info2[object])
+  }
+
+  if (info[object] == "sim") {
+    console.log('Ambos recorrentes')
   }
 }
