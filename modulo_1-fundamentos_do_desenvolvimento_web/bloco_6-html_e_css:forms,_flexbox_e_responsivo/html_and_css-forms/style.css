@@ -1,18 +1,18 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+body {
   color: rgb(80, 80, 80);
-  background-color: rgb(240, 240, 240);
+  background: url(images/42939467-blurred-background-of-nature-image-of-abstract-nature-blur-background-natural-blur-abstract-and-back.jpg) fixed;
   font-size: 15px;
 }
 
 h1 {
   text-align: center;
-  margin-top: 20px;
-  font-size: 40px;
+  font-size: 50px;
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgb(80, 80, 80);
+  border-radius: 10px;
+  margin: 40px auto;
+  padding: 50px;
+  width: 80%;
 }
 
 legend {
@@ -21,14 +21,25 @@ legend {
 
 .form {
   margin: 40px auto;
-  padding: 30px;
+  padding: 50px;
   width: 80%;
-  border-radius: 5px;
+  border-radius: 10px;
   color: rgb(80, 80, 80);
+  border: 1px solid rgb(80, 80, 80);
+  background-color: rgb(240, 240, 240);
+}
+
+fieldset[class="form"] p {
+  margin-bottom: 50px;
 }
 
 label {
   font-size: 17px;
+}
+
+label[for="resumo-curriculo"] {
+  margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 .input-class {
@@ -37,13 +48,16 @@ label {
   padding: 7px;
 }
 
+textarea {
+  margin: 5px 0px 30px 0px;
+  width: 100%;
+}
+
 button[type="submit"] {
   padding: 15px 30px;
   font-size: 20px;
   border-radius: 5px;
   float: right;
-  background-color: green;
-  color: rgb(230, 230, 230);
 }
 
 input[type="radio"] {
