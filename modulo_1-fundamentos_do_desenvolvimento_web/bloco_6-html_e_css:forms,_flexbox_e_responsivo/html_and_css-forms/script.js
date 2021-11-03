@@ -1,4 +1,3 @@
-
 function elementCreator(howMany, parentId, childElement) {
   stateArray = ['Minas Gerais', 'São Paulo', 'Rio Grande Do Sul', 'Amapá']
 
@@ -11,4 +10,14 @@ function elementCreator(howMany, parentId, childElement) {
 
 elementCreator(4, 'estado', 'option')
 
-var picker = new Pikaday({ field: document.getElementById('datepicker') });
+var picker = new Pikaday({
+  field: document.getElementById('datepicker'),
+  format: 'DD/MM/YYYY',
+  onSelect: function () {
+    console.log(this.getMoment().format('Do MMMM YYYY'));
+  }
+});
+
+document.getElementById('submit').addEventListener('click', function preventDefaultAction(event) {
+  event.preventDefault();
+});
