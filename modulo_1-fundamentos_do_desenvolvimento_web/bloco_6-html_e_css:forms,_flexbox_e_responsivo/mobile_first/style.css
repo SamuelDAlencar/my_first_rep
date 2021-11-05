@@ -17,7 +17,7 @@ figure {
   margin: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 840px) {
   body {
     background-color: rgb(244, 244, 244);
     margin: 15px;
@@ -39,6 +39,16 @@ figure {
     justify-content: center;
     justify-content: space-around;
     flex-grow: 1;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 840px) and (max-width: 1600px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
   }
