@@ -28,6 +28,10 @@ figure {
     width: 250px;
   }
 
+  h1, h2 {
+    text-align: center;
+  }
+
   main {
     display: flex;
     flex-basis: 50px;
@@ -36,5 +40,6 @@ figure {
     justify-content: space-around;
     flex-grow: 1;
     align-items: center;
+    text-align: center;
   }
 }
