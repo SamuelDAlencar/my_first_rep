@@ -5,7 +5,16 @@ body {
 h1 {
   font-size: 25px;
 }
-h2 {
+
+main {
+  display: flex;
+  flex-basis: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-around;
+  flex-grow: 1;
+  align-items: center;
+  text-align: center;
 }
 
 img {
@@ -28,7 +37,8 @@ figure {
     width: 250px;
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     text-align: center;
   }
 
