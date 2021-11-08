@@ -14,12 +14,25 @@ header {
 }
 
 main {
-  margin: 15px;
+  margin: 10px;
 }
 
 header p {
-  font-size: 30px;
-  margin-left: 30px;
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+nav,
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10 10;
+}
+
+nav ul li {
+  margin: 5px 15px;
+  font-size: 12px;
 }
 
 .chap-info {
@@ -27,22 +40,36 @@ header p {
   flex-direction: column;
   width: 100%;
   justify-content: flex-start;
+  margin-bottom: 25px;
 }
 
 .aside-one {
   order: 1;
 }
 
-nav,
-nav ul {
-  display: flex;
-  align-items: center;
-  margin: 0 30px;
+.aside-one,
+.aside-two {
+  font-size: 15px;
 }
 
-nav ul li {
-  margin: 0 30px;
+hr {
+  width: 80%;
+  text-align: center;
+  height: 1px;
+  color: black;
+}
+
+.main-content {
+  margin-top: 40px;
+}
+
+.main-content h1 {
   font-size: 20px;
+}
+
+.main-content p {
+  font-size: 15px;
+  padding: 10px;
 }
 
 footer {
@@ -50,15 +77,69 @@ footer {
   flex-direction: column;
   background-color: gray;
   text-align: center;
+  font-size: 12px;
+  padding: 5px;
 }
 
 /* Media queries -------------------------------------------------- */
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 647px) {
+  body {
+  }
 }
 
-@media screen and (min-width: 577px) and (max-width: 1200px) {
+@media screen and (min-width: 648px) and (max-width: 940px) {
+  header p {
+    font-size: 22px;
+  }
+
+  nav,
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 5px;
+  }
+
+  nav ul li {
+    margin: 5px 15px;
+    font-size: 16px;
+  }
+
+  .chap-info {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .aside-one,
+  .aside-two {
+    flex-basis: 45%;
+    font-size: 16px;
+  }
+
+  .chap-info h2 {
+    text-align: center;
+  }
+
+  .main-content h1 {
+    font-size: 25px;
+  }
+
+  .main-content p {
+    font-size: 17px;
+    padding: 10px;
+  }
+
+  footer {
+    background-color: gray;
+    text-align: center;
+    font-size: 15px;
+    padding: 15px;
+  }
 }
 
-@media screen and (min-width: 1201px) and (max-width: 1920px) {
+@media screen and (min-width: 941px) and (max-width: 1920px) {
+  body {
+    /* background-color: blue; */
+  }
 }
