@@ -15,7 +15,9 @@ testingScope(true);
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 
 const oddsAndEvensFunction = () => {
-  return oddsAndEvens.sort();
+  return oddsAndEvens.sort(function (a, b) {
+    return a - b
+  })
 }
 
 console.log(`Os números ${oddsAndEvensFunction()} se encontram ordenados de forma crescente!`); // será necessário alterar essa linha 😉
