@@ -40,3 +40,16 @@ const factorial = (n) => {
 }
 
 console.log(factorial(5));
+
+
+let longestWord = '';
+const biggestWord = (phrase) => {
+  for (let i = 0; i < phrase.split(' ').length; i += 1) {
+    if (phrase.split(' ')[i].length > longestWord.length) {
+      longestWord = phrase.split(' ')[i]
+    }
+  }
+
+  console.log(longestWord)
+}
+biggestWord('meu nome é ana')
