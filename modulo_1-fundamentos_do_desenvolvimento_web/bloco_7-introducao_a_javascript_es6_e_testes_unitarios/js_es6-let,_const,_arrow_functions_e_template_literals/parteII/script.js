@@ -8,7 +8,7 @@
 // });
 
 let phrase = 'Meu nome é Samuel x Alencar';
-let skills = ['css', 'javascript', 'html']
+const skills = ['css', 'javascript', 'html']
 let x = '';
 
 const xFinder = (string) => {
