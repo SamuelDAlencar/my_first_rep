@@ -8,6 +8,7 @@
 // });
 
 let phrase = 'Meu nome é Samuel x Alencar';
+let skills = ['css', 'javascript', 'html']
 let x = '';
 
 const xFinder = (string) => {
@@ -19,7 +20,13 @@ const xFinder = (string) => {
     }
   }
 
-  console.log(phrase)
+  console.log(phrase);
 }
 
 xFinder('de')
+
+const skillsAdder = (phrase) => {
+  console.log(`${phrase}! Minhas três habilidades principais são: ${skills}`)
+}
+
+skillsAdder(phrase);
