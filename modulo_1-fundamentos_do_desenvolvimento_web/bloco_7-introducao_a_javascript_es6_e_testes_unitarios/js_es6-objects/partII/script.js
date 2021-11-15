@@ -59,11 +59,14 @@ objectAdder();
 let studentsCounter = 0;
 
 const howManyStudents = () => {
-  for (let i = 0; i < Object.keys(allLessons).length; i += 1) {
-    for (let c = 0; i < Object.values(allLessons)[i].length; c += 1) {
+  let howManyKeys = 0;
 
-    }
+  for (let key in allLessons) {
+    howManyKeys += 1
+    console.log(key[howManyKeys])
   }
+  
+  console.log(howManyKeys)
 }
 
 howManyStudents();
