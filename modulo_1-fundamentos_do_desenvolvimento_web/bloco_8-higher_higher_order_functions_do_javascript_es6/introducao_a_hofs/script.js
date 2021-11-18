@@ -1,3 +1,5 @@
+// Exercise 1 ------------------------
+
 const newEmployees = (callback) => {
   const employees = {
     id1: callback('Pedro Guerra'),
@@ -18,3 +20,6 @@ const employee = (fullName) => {
 };
 
 console.log(newEmployees(employee));
+
+// Exercise 2 ------------------------
+
