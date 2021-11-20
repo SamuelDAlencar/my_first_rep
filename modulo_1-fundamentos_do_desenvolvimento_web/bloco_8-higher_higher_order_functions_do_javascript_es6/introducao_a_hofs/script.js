@@ -23,3 +23,16 @@ console.log(newEmployees(employee));
 
 // Exercise 2 ------------------------
 
+const prizeDraw = (number) => {
+  const randomNum =  Math.floor(Math.random() * 5)
+
+  if (randomNum === number) {
+    console.log('Congrats!!!');
+  } else {
+    console.log('Maybe next time :/');
+  }
+
+  return randomNum
+}
+
+console.log(prizeDraw(2))
