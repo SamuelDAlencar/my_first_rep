@@ -117,5 +117,33 @@ console.log(getNamedBook());
 // 4
 
 function booksOrderedByReleaseYearDesc() {
-  // escreva aqui seu código
+  return books.sort((a, b) => { return b.releaseYear - a.releaseYear });
+}
+
+console.log(booksOrderedByReleaseYearDesc());
+
+// 5
+
+function everyoneWasBornOnSecXX() {
+  return books.every((book) => book.author.birthYear >= 1901)
+}
+
+console.log(everyoneWasBornOnSecXX());
+
+// 6
+
+function someBookWasReleaseOnThe80s() {
+  return books.some((book) => book.releaseYear > 1980 && book.releaseYear < 1990)
+}
+
+console.log(someBookWasReleaseOnThe80s());
+
+// 7
+
+function authorUnique() {
+  return books.forEach((book) => {
+    const currentBook = book.author.birthYear;
+
+    if (book.author.birthYear )
+  })
 }
