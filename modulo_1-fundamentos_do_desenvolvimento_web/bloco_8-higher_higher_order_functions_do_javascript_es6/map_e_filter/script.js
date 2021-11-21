@@ -132,10 +132,24 @@ console.log(oldBooks(oldBooksOrdered));
 // 7
 
 function authorWith3DotsOnName() {
-  let bookName = '';
-  bookName = books.find((book) => book.author.name.includes('J. R. R.')).name
+  let ifRepCount = 0;
+  let ifRepTrue = false;
 
-  return bookName;
+  for (let i1 = 0; i1 < books.length; i1 += 1) {
+    ifRepCount = 0;
+
+    for (let i2 = 0; i2 < books[i1].author.name.length; i2 += 1) {
+      if (books[i1].author.name[i2] === '.') {
+        ifRepCount += 1
+      }
+
+      if (ifRepCount === 3) {
+        ifRepTrue = true;
+
+        return books[i1]
+      }
+    }
+  }
 }
 
 console.log(authorWith3DotsOnName())
