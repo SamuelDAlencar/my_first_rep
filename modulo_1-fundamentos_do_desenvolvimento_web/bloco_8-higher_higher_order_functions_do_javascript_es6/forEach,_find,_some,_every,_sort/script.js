@@ -141,9 +141,21 @@ console.log(someBookWasReleaseOnThe80s());
 // 7
 
 function authorUnique() {
-  return books.forEach((book) => {
-    const currentBook = book.author.birthYear;
+  let repeatValue = 0;
 
-    if (book.author.birthYear )
-  })
-}
+  for (let i1 = 0; i1 < books.length; i1 += 1) {
+    for (let i2 = 0; i2 < books.length; i2 += 1) {
+      if (books[i1].author.birthYear === books[i2].author.birthYear && books[i1].name != books[i2].name) {
+        repeatValue += 1;
+      }
+    };
+  };
+
+  if (repeatValue === 0) {
+    return true
+  } else {
+    return false
+  }
+};
+
+console.log(authorUnique())
