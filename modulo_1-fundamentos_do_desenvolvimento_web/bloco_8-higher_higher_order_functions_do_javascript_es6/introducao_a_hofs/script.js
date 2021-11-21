@@ -23,16 +23,45 @@ console.log(newEmployees(employee));
 
 // Exercise 2 ------------------------
 
-const prizeDraw = (number) => {
-  const randomNum =  Math.floor(Math.random() * 5)
+const randomizer = () => {
+  const randomNum = Math.floor(Math.random() * 5)
 
-  if (randomNum === number) {
+  return randomNum;
+}
+
+const prizeDraw = (number, callback) => {
+  if (number === callback) {
     console.log('Congrats!!!');
   } else {
     console.log('Maybe next time :/');
   }
 
-  return randomNum
+  return callback
 }
 
-console.log(prizeDraw(2))
+console.log(prizeDraw(2, randomizer()))
+
+// Exercise 3 ------------------------
+
+const correctAnswers = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const studentsAnswers = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const resCheckFunc = (corrAns, studAns) => {
+  let counter = 0.0;
+
+  studAns.forEach((ans, i) => {
+    if (ans === corrAns[i]) {
+      counter += 1.0;
+    } else if (ans != corrAns[i] && ans != 'N.A') {
+      counter -= 0.5
+    }
+  })
+
+  return counter
+};
+
+const template = (corrAns, studAns, callback) => {
+  return callback(corrAns, studAns)
+};
+
+console.log(template(correctAnswers, studentsAnswers, resCheckFunc));
