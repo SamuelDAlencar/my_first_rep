@@ -56,17 +56,38 @@ const objectAdder = () => {
 
 objectAdder();
 
-let studentsCounter = 0;
-
 const howManyStudents = () => {
-  let howManyKeys = 0;
+  let howManyStudentsCount = 0;
 
-  for (let key in allLessons) {
-    howManyKeys += 1
-    console.log(key[howManyKeys])
-  }
-  
-  console.log(howManyKeys)
+  howManyStudentsCount += allLessons.lesson1.numeroEstudantes
+  howManyStudentsCount += allLessons.lesson2.numeroEstudantes
+  howManyStudentsCount += allLessons.lesson3.numeroEstudantes
+
+  return howManyStudentsCount;
 }
 
-howManyStudents();
+console.log(howManyStudents())
+
+const getValueByNumber = (lesson, key) => {
+  if (key === 0) {
+    return allLessons[lesson].materia
+  } else if (key === 1) {
+    return allLessons[lesson].numeroEstudantes
+  } else if (key === 2) {
+    return allLessons[lesson].professor
+  } else if (key === 3) {
+    return allLessons[lesson].turno
+  }
+};
+
+console.log(getValueByNumber('lesson1', 0));
+
+const verifyPair = (lesson, property, value) => {
+  if (allLessons[lesson][property] === value) {
+    return true;
+  } else {
+    return false;
+  }
+};
+console.log(verifyPair('lesson1', 'turno', 'manhã'));
+
