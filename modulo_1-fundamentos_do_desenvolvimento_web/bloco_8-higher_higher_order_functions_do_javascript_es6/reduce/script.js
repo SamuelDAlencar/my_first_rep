@@ -106,3 +106,78 @@ function averageAge() {
 }
 
 console.log(averageAge())
+
+// Exercise 4
+
+function longestNamedBook() {
+  const longestBookName = books.reduce((biggestNameBook, currentBook) => {
+    if (currentBook.name.length > biggestNameBook) {
+      return biggestNameBook = currentBook
+    } else {
+      return biggestNameBook
+    }
+  })
+
+  return longestBookName;
+}
+
+console.log(longestNamedBook())
+
+// Exercise 5
+
+const names = [
+  'Aanemarie', 'Adervandes', 'Akifusa',
+  'Abegildo', 'Adicellia', 'Aladonata',
+  'Abeladerco', 'Adieidy', 'Alarucha',
+];
+
+function containsA() {
+  const aChecker = names.reduce((aAmount, currentName) => {
+    for (let i = 0; i < currentName.length; i += 1) {
+      if (currentName[i].toLowerCase() === 'a') {
+        aAmount = aAmount += 1;
+      }
+    }
+
+    return aAmount;
+  }, 0)
+
+  return aChecker;
+}
+
+console.log(containsA())
+
+// Exercise 6
+
+const students = ['Pedro Henrique', 'Miguel', 'Maria Clara'];
+const grades = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 10, 8, 9]];
+
+const reducerFunc = (i) => {
+  const gradeCalc = grades[i].reduce((finalSomation, currentNum) => {
+    finalSomation = finalSomation += currentNum;
+    return finalSomation
+  }, 0)
+
+  return gradeCalc;
+}
+
+function studentAverage() {
+  const firstStudentGrade = reducerFunc(0) / 5;
+  const secondStudentGrade = reducerFunc(1) / 5;
+  const thirdStudentGrade = reducerFunc(2) / 5;
+  const allStudents = [firstStudentGrade, secondStudentGrade, thirdStudentGrade]
+
+  const finalReport = students.map((currentStudent, i) => {
+    return { name: currentStudent, average: allStudents[i] }
+  })
+
+  return finalReport
+}
+
+console.log(studentAverage());
+
+const expected = [
+  { name: 'Pedro Henrique', average: 7.8 },
+  { name: 'Miguel', average: 9.2 },
+  { name: 'Maria Clara', average: 8.8 },
+];
