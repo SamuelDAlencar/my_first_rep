@@ -21,7 +21,7 @@ setTimeout(() => {
 }, 4000);
 
 
-// Exercise 4
+// Exercise 4 and 5
 const messageDelay = () => Math.floor(Math.random() * 5000);
 
 const getMarsTemperature = () => {
@@ -30,15 +30,28 @@ const getMarsTemperature = () => {
 };
 
 // crie a função sendMarsTemperature abaixo
-const sendMarsTemperature = () => {
-  console.log(`Mars temperature is: ${getMarsTemperature()} degree Celsius`)
-};
+const sendMarsTemperature = (callback, errorManager, errorReason) => {
+  console.log(`Mars temperature is: ${getMarsTemperature()} degree Celsius`);
+
+  callback(getMarsTemperature());
+  errorManager(errorReason);
+}
+
+const toFahrenheit = (degreeCelsius) => (degreeCelsius * 9 / 5) + 32;
+
+const temperatureInFahrenheit = (temperature) =>
+  console.log(`It is currently ${toFahrenheit(temperature)}ºF at Mars`);
+
+const greet = (temperature) =>
+  console.log(`Hi there! Curiosity here. Right now is ${temperature}ºC at Mars`);
+
+const handleError = (errorReason) =>
+  console.log(`Error getting temperature: ${errorReason}`);
 
 setTimeout(() => {
-  sendMarsTemperature(); // imprime "Mars temperature is: 20 degree Celsius", por exemplo
+  sendMarsTemperature(temperatureInFahrenheit, handleError, 'Robot is busy');
+  sendMarsTemperature(greet, handleError, 'Robot is busy');
 }, messageDelay());
-
-// Exercise 5
 
 
 // Exercise 6
