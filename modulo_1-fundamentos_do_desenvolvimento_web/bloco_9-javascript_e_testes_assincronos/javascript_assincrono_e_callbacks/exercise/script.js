@@ -21,7 +21,7 @@ setTimeout(() => {
 }, 4000);
 
 
-// Exercise 4 and 5
+// Exercise 4, 5 and 6
 const messageDelay = () => Math.floor(Math.random() * 5000);
 
 const getMarsTemperature = () => {
@@ -30,11 +30,10 @@ const getMarsTemperature = () => {
 };
 
 // crie a função sendMarsTemperature abaixo
-const sendMarsTemperature = (callback, errorManager, errorReason) => {
+const sendMarsTemperature = (callback, mainFuc) => {
+  mainFuc(callback);
   console.log(`Mars temperature is: ${getMarsTemperature()} degree Celsius`);
-
-  callback(getMarsTemperature());
-  errorManager(errorReason);
+  console.log(`--------------------------------`)
 }
 
 const toFahrenheit = (degreeCelsius) => (degreeCelsius * 9 / 5) + 32;
@@ -45,23 +44,36 @@ const temperatureInFahrenheit = (temperature) =>
 const greet = (temperature) =>
   console.log(`Hi there! Curiosity here. Right now is ${temperature}ºC at Mars`);
 
-const handleError = (errorReason) =>
-  console.log(`Error getting temperature: ${errorReason}`);
+const handler = (callback) => {
+  let percent = Math.floor(Math.random() * 100)
+
+  if (percent >= 60) {
+    console.log(`Rate: ${percent}%. Success on reaching the extra data.`)
+    callback(getMarsTemperature());
+  } else {
+    console.log(`Rate: ${percent}%. Failed to reach the extra data, robot too busy.`)
+  };
+};
 
 setTimeout(() => {
-  sendMarsTemperature(temperatureInFahrenheit, handleError, 'Robot is busy');
-  sendMarsTemperature(greet, handleError, 'Robot is busy');
+  sendMarsTemperature(temperatureInFahrenheit, handler);
+  sendMarsTemperature(greet, handler);
 }, messageDelay());
-
-
-// Exercise 6
-
 
 // Exercise 7
 
 
+const uppercase = (str, callback) => {
+  setTimeout(() => {
+    callback(str.toUpperCase());
+  }, 500);
+};
+
+uppercase('aaa', console.log);
 // Exercise 8
 
 
 // Exercise 9
 
+// ----------------------------------------
+module.exports = uppercase;
