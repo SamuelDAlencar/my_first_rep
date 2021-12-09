@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Exercício 5.2</title>
+  <style>
+    section {
+      border-color: black;
+      border-style: solid;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .main-content {
+      background-color: yellow;
+    }
+
+    .main-content .center-content {
+      background-color: red;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .main-content .center-content p {
+      font-style: italic;
+    }
+
+    .main-content .left-content {
+      background-color: green;
+      width: 60%;
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    .main-content .left-content .small-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 100%;
+    }
+
+    .main-content .right-content {
+      background-color: blue;
+      width: 60%;
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .main-content .description {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    // Exercise 1
+    let h1Creation = document.createElement('h1')
+    let mainCreation = document.createElement('main')
+    let body = document.getElementsByTagName('body')[0]
+
+
+    body.appendChild(h1Creation);
+    body.children[1].innerText = 'Exercício 5.2 - JavaScript DOM';
+
+    // Exercise 2
+    body.appendChild(mainCreation).classList.add('main-content')
+
+    // Exercise 3
+    let sectionCreation = document.createElement('section')
+    let main = document.getElementsByTagName('main')[0]
+
+    main.appendChild(sectionCreation).classList.add('center-content')
+
+    // Exercise 4
+    document.getElementsByTagName('section')[0].appendChild(document.createElement('p')).innerText = ('Baodia')
+
+    // Exercise 5
+    main.appendChild(document.createElement('section'))
+    document.getElementsByTagName('section')[1].classList.add('left-content')
+
+    // Exercise 6
+    main.appendChild(document.createElement('section'))
+    document.getElementsByTagName('section')[2].classList.add('right-content')
+
+    // Exercise 7
+    document.getElementsByTagName('section')[1].appendChild(document.createElement('img')).src = 'https://picsum.photos/200';
+
+    document.getElementsByTagName('img')[0].classList.add('small-image')
+
+    // Exercise 8
+    let ul = document.getElementsByTagName('ul')
+    document.getElementsByTagName('section')[2].appendChild(document.createElement('ul'))
+
+    function childElementCreator(howMany, parentTag, parentIndice, child) {
+      let findParent = document.getElementsByTagName(parentTag)[parentIndice]
+
+      for (i = 0; i < howMany; i++) {
+        findParent.appendChild(document.createElement(child))
+      }
+    }
+
+    childElementCreator(10, 'ul', 0, 'li')
+
+    for (i = 0; i < 10; i++) {
+      document.getElementsByTagName('li')[i].innerText = i
+    }
+
+    // Exercise 9
+    childElementCreator(3, 'main', 0, 'h3')
+
+    // Exercise 1 part 2
+    document.getElementsByTagName('h1')[0].classList.add('title')
+
+    // Exercise 2 part 2
+    for (i = 0; i < 3; i++) {
+      document.getElementsByTagName('h3')[i].classList.add('description')
+    }
+
+    // Exercise 3 part 2
+    document.getElementsByTagName('main')[0].removeChild(document.getElementsByClassName('left-content')[0])
+
+    // Exercise 4 part 2
+    document.getElementsByClassName('right-content')[0].style.marginRight = 'auto'
+
+    // Exercise 5 part 2
+    document.getElementsByClassName('main-content')[0].style.backgroundColor = 'green'
+
+    // Exercise 6 part 2
+    function elementRemover(elementTag, elementIndice) {
+      document.getElementsByTagName(elementTag)[elementIndice].remove();
+    }
+
+    elementRemover('li', 9)
+    elementRemover('li', 8)
+
+  </script>
+</body>
+
+</html>
