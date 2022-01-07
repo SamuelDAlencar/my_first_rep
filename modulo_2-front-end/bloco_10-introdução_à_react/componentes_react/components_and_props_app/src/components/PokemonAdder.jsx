@@ -2,6 +2,22 @@ import { Component } from "react";
 import PropTypes from "prop-types";
 
 export default class PokemonAdder extends Component {
+
+  constructor() {
+    super()
+
+    this.state = {
+      type: '',
+    }
+  }
+
+  createButton = () => {
+    const { Pokemons } = this.props;
+    const pokemonType = new Set(Pokemons.map(({ type }) => type));
+    const pokemonTypeArray = Array.from(pokemonType);
+    return pokemonTypeArray.map((type) => <button key={type}>{type}</button>);
+  };
+
   render() {
     const { Pokemons } = this.props;
     return (
@@ -23,6 +39,8 @@ export default class PokemonAdder extends Component {
             </section>
           );
         })}
+        {this.createButton()}
+        {console.log(this)}
       </>
     );
   }
