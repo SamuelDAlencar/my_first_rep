@@ -1,0 +1,36 @@
+main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header {
+  text-align: center;
+  border-bottom: 1px solid grey;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.title {
+}
+
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 30px;
+  width: 80%;
+}
+
+.fieldset input[type='text']{
+  margin: 5px;
+  width: 100%;
+  height: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid grey;
+  width: 100%;
+  margin-top: 30px;
+}
